@@ -1,0 +1,11 @@
+{
+	"network":"tcp",
+	"host":"172.21.34.72",
+	"port":"3306",
+	"user":"root",
+	"pwd":"cjds1023456",
+	"db_name":"miyou",
+	"life_time":"+3s",
+	"max_open":"100",
+	"max_idle":"10"
+}
