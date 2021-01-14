@@ -10,8 +10,8 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
-	"gitlab.stagingvip.net/publicGroup/public/common"
-	"gitlab.stagingvip.net/publicGroup/public/redis"
+	"qzapp/common"
+	"qzapp/redis"
 )
 
 func (u *User) UserInfo(ctx *gin.Context) (int, string, map[string]string) {

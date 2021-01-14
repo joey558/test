@@ -11,7 +11,7 @@ import (
 	"github.com/gin-contrib/sessions"
 	"github.com/gin-contrib/sessions/redis"
 	"github.com/gin-gonic/gin"
-	"gitlab.stagingvip.net/publicGroup/public/common"
+	"qzapp/common"
 )
 
 type JsonOut struct {

@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"qzapp/thread"
 
-	"gitlab.stagingvip.net/publicGroup/public/common"
+	"qzapp/common"
 )
 
 /*

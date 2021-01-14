@@ -5,7 +5,7 @@ import (
 	"strings"
 
 	"github.com/gin-gonic/gin"
-	"gitlab.stagingvip.net/publicGroup/public/common"
+	"qzapp/common"
 )
 
 func Host(host string) string {

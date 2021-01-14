@@ -6,8 +6,8 @@ import (
 	"strconv"
 	"time"
 
-	"gitlab.stagingvip.net/publicGroup/public/common"
-	"gitlab.stagingvip.net/publicGroup/public/redis"
+	"qzapp/common"
+	"qzapp/redis"
 
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/jinzhu/gorm"

@@ -9,8 +9,8 @@ import (
 
 	"github.com/gin-contrib/sessions"
 	"github.com/gin-gonic/gin"
-	"gitlab.stagingvip.net/publicGroup/public/common"
-	"gitlab.stagingvip.net/publicGroup/public/redis"
+	"qzapp/common"
+	"qzapp/redis"
 )
 
 func (t *Public) Register(in_param map[string]string, ctx *gin.Context) (int, string) {

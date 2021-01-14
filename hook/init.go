@@ -2,7 +2,7 @@ package hook
 
 import (
 	"encoding/json"
-	"gitlab.stagingvip.net/publicGroup/public/common"
+	"qzapp/common"
 )
 
 var log_path string

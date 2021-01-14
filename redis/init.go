@@ -7,7 +7,7 @@ import (
 	"time"
 
 	"github.com/garyburd/redigo/redis"
-	"gitlab.stagingvip.net/publicGroup/public/common"
+	"qzapp/common"
 )
 
 //连接池的结构体

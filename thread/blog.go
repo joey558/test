@@ -8,7 +8,7 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
-	"gitlab.stagingvip.net/publicGroup/public/common"
+	"qzapp/common"
 )
 
 func (t_blog *BlogThread) getBlogCom(ctx *gin.Context, id, blog_id, p_id, page, page_size string) (int, []map[string]string) {
@@ -313,7 +313,7 @@ func (t_blog *BlogThread) BlogCommReply(ctx *gin.Context, in_param map[string]st
 	t_list["create_time"] = create_time
 	t_list["status"] = "2"
 	t_list["is_up"] = is_up
-	inser_blog_comm := common.InsertSql("blog_comm", t_list) //插入评论
+	inser_blog_comm := qzapp/common.InsertSql("blog_comm", t_list) //插入评论
 
 	if len(sys_account) > 1 { //评论回复发送通知,不会给发帖人发送通知
 		blog_content := string([]rune(blog_list_one["content"])[:10])
@@ -328,7 +328,7 @@ func (t_blog *BlogThread) BlogCommReply(ctx *gin.Context, in_param map[string]st
 		sys_msg_map["to_user"] = sys_account
 		sys_msg_map["msg_type"] = "1"
 		//sys_msg_map["x_id"] = blog_id
-		inser_sys_msg := common.InsertSql("sys_msg", sys_msg_map)
+		inser_sys_msg := qzapp/common.InsertSql("sys_msg", sys_msg_map)
 		sql_arr = append(sql_arr, inser_sys_msg)
 	}
 
@@ -410,7 +410,7 @@ func (t_blog *BlogThread) BlogLike(ctx *gin.Context, in_param map[string]string)
 
 	//获取点赞数
 	if bl_like_num, _ := bl_map["like_num"]; bl_like_num != "" {
-		like_num, _ = common.Str2Int(bl_like_num)
+		like_num, _ = qzapp/common.Str2Int(bl_like_num)
 		if is_like == 1 {
 			like_num = like_num + 1
 		} else {
@@ -484,7 +484,7 @@ func (t_blog *BlogThread) CommLike(ctx *gin.Context, in_param map[string]string)
 
 	//获取点赞数
 	if bl_like_num, _ := c_info["like_num"]; bl_like_num != "" {
-		like_num, _ = common.Str2Int(bl_like_num)
+		like_num, _ = qzapp/common.Str2Int(bl_like_num)
 		if is_like == 1 {
 			like_num = like_num + 1
 		} else {
@@ -604,7 +604,7 @@ func (t_blog *BlogThread) BlogPublish(ctx *gin.Context, in_param map[string]stri
 
 	t_list["id"] = model.GetKey(16)
 	t_list["content"] = content
-	t_list["img_url"] = common.StructToJson(img_arr)
+	t_list["img_url"] = qzapp/common.StructToJson(img_arr)
 	t_list["view_num"] = "0"
 	t_list["account"] = account
 	t_list["nick_name"] = nick_name
@@ -616,7 +616,7 @@ func (t_blog *BlogThread) BlogPublish(ctx *gin.Context, in_param map[string]stri
 	t_list["create_time"] = time.Now().Format(f_date)
 	t_list["status"] = blog_status
 
-	insert_str := common.InsertSql("blog_list", t_list)
+	insert_str := qzapp/common.InsertSql("blog_list", t_list)
 	sql_err := model.Query(insert_str)
 	if sql_err != nil {
 		t_msg = "发帖失败"
@@ -689,7 +689,7 @@ func (t_blog *BlogThread) BlogOne(ctx *gin.Context, in_param map[string]string) 
 	return t_status, t_msg, t_list
 }
 
-func (t_blog *BlogThread) BlogCommOne(ctx *gin.Context, in_param map[string]string) (int, int, string, map[string]interface{}) {
+func (t_blog *BlogThread) Blogqzapp/commone(ctx *gin.Context, in_param map[string]string) (int, int, string, map[string]interface{}) {
 
 	t_status := STATUS_SUCCESS
 	t_msg := MSG_SUCCESS

@@ -5,7 +5,7 @@ import (
 	"qzapp/model"
 	"time"
 
-	"gitlab.stagingvip.net/publicGroup/public/common"
+	"qzapp/common"
 )
 
 var Loc, _ = time.LoadLocation("Local")

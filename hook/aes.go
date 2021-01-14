@@ -3,7 +3,7 @@ package hook
 import (
 	"qzapp/model"
 
-	"gitlab.stagingvip.net/publicGroup/public/common"
+	"qzapp/common"
 )
 
 var key_code = "private_key"

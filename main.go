@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"qzapp/router"
 
-	"gitlab.stagingvip.net/publicGroup/public/common"
+	"qzapp/common"
 )
 
 func main() {

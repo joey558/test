@@ -1,8 +1,8 @@
 package model
 
 import (
-	"gitlab.stagingvip.net/publicGroup/public/common"
-	"gitlab.stagingvip.net/publicGroup/public/redis"
+	"qzapp/common"
+	"qzapp/redis"
 )
 
 func (ab *ActiveBonus) ActBonus(act_id string) ActiveBonus {

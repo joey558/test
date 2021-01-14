@@ -3,8 +3,8 @@ package model
 import (
 	"fmt"
 
-	"gitlab.stagingvip.net/publicGroup/public/common"
-	"gitlab.stagingvip.net/publicGroup/public/redis"
+	"qzapp/common"
+	"qzapp/redis"
 )
 
 func (wc *WebConf) Config(code string) WebConf {
